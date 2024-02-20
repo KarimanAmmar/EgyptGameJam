@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 367c6278b2fbff24998d682107f9eea5, type: 3}
+  m_Name: Stay In Border10
+  m_EditorClassIdentifier: 
+  _neighborsFilter: {fileID: 11400000, guid: 38da58f7c979f3e42a5009148ee4cca4, type: 2}
+  _center: {x: 0, y: 0}
+  _radius: 5
+  _borderWeight: 0.9

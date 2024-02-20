@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 363294c604eacf64db55218b7f81f669, type: 3}
+  m_Name: CombineBehaviours 1
+  m_EditorClassIdentifier: 
+  _behaviours:
+  - {fileID: 11400000, guid: 17c2a0933eda3124d8ba859de85b3e80, type: 2}
+  - {fileID: 11400000, guid: 4a500a3de86939646a18b5a1290d3af5, type: 2}
+  _wieghts:
+  - 6
+  - 1

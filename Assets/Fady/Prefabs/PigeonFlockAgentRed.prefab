@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 3080355298481335931}
   - component: {fileID: 3635894203690636377}
   - component: {fileID: 8431029691970563530}
+  - component: {fileID: 9120876615368887015}
   m_Layer: 8
   m_Name: PigeonFlockAgentRed
   m_TagString: Untagged
@@ -193,3 +194,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d167855d49084524c9dc381e99604f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9120876615368887015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7703768484301726517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f284cbf489e8104db63c1de8be6cab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  canShoot: 0

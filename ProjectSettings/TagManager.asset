@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - RedBird
+  - Egg
+  - Enemy
+  - Child
   - bullet
+
   layers:
   - Default
   - TransparentFX

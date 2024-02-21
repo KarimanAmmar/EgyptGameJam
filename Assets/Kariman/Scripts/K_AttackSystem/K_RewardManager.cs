@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
-public class K_colonyManager : MonoBehaviour
+public class K_RewardManager : MonoBehaviour
 {
     [SerializeField] GameObject Egg;
     private void OnTriggerEnter2D(Collider2D other)

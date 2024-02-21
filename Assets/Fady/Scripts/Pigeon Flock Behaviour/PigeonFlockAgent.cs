@@ -23,10 +23,17 @@ public class PigeonFlockAgent : MonoBehaviour
         _myPigeonFlock= _pigeonFlock;
     }
     // Update is called once per frame
-    public void Move(Vector2 velocity)
+    public void Move(Vector2 velocity, bool _force = false)
     {
+        if (_force == false) 
+        {
         transform.up = velocity;
         PigeonAgentRidgidbody.velocity = velocity;
+        }
+        else if( _force == true)
+        {
+            PigeonAgentRidgidbody.AddForce(velocity, ForceMode2D.Impulse);
+        }
 
     }
 }

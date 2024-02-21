@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1048626905327163468}
   - component: {fileID: 1063790394496101117}
   m_Layer: 6
-  m_Name: Obstacle
+  m_Name: Main Pigeon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

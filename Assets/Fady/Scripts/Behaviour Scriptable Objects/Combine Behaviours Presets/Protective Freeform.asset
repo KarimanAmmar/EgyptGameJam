@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 363294c604eacf64db55218b7f81f669, type: 3}
+  m_Name: Protective Freeform
+  m_EditorClassIdentifier: 
+  _behaviours:
+  - {fileID: 11400000, guid: 5de5245fd77f30346bcf6cde987462e9, type: 2}
+  - {fileID: 11400000, guid: b1e8d982617e753498bfb62b4c3fbd13, type: 2}
+  - {fileID: 11400000, guid: deb097f553654b741bf9a9823477047c, type: 2}
+  - {fileID: 11400000, guid: ef79f77c073450c45ba0969e7a272779, type: 2}
+  - {fileID: 11400000, guid: 91706567688f16e4e9723ee51c956dd3, type: 2}
+  - {fileID: 11400000, guid: 19496d6432936684a93b9c97292595c1, type: 2}
+  _wieghts:
+  - 1
+  - 2
+  - 1
+  - 0.1
+  - 7
+  - 7

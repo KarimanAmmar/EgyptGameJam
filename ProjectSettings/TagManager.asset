@@ -9,7 +9,6 @@ TagManager:
   - Enemy
   - Child
   - bullet
-
   layers:
   - Default
   - TransparentFX
@@ -17,9 +16,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Obstacle
-  - MainPigeon
   - Pigeon
+  - MainPigeon
+  - Obstacles
   - 
   - 
   - 

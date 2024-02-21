@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1905911638581347978}
   - component: {fileID: 8109328113957071883}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Pigeon Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3635894203690636377}
   - component: {fileID: 8431029691970563530}
   - component: {fileID: 9120876615368887015}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: PigeonFlockAgentRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}

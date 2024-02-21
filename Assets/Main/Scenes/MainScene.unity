@@ -415,7 +415,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1e502f96db8c6034597f3712f01a27ba, type: 2}
     - target: {fileID: 3025873265169594145, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
       propertyPath: _pigeonLayer.m_Bits
-      value: 0
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 7622222152786768686, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
       propertyPath: m_Name
@@ -468,7 +468,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7622222152786768686, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2074486446}
   m_SourcePrefab: {fileID: 100100000, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
 --- !u!1001 &902902366
 PrefabInstance:
@@ -761,6 +764,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2074486443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7622222152786768686, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
+  m_PrefabInstance: {fileID: 595133489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2074486446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074486443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aee43944f49db64aa629b26dcf6fc50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  babybirds: []
 --- !u!212 &1048626905713931339
 SpriteRenderer:
   m_ObjectHideFlags: 0

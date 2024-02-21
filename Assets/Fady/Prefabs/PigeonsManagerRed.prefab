@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7622222152786768686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7666082996960200783}
+  - component: {fileID: 3025873265169594145}
+  m_Layer: 0
+  m_Name: PigeonsManagerRed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7666082996960200783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7622222152786768686}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.120164156, y: 0.08164261, z: 0.02481317}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3025873265169594145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7622222152786768686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b31332814f298f4fabe7bd13b3fe8df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pAgentPrefab: {fileID: 8431029691970563530, guid: 623a0b1b0fe9c1f4b9bb14790682b431, type: 3}
+  _pFlockBehaviour: {fileID: 11400000, guid: f3e595c189a9d9d4a886e98d2190382a, type: 2}
+  _startingCount: 80
+  _scaleMovement: 5.2
+  _maxSpeed: 2
+  _areaOfInfluenceRadius: 1.5
+  _avoidanceRadiusMultiplier: 0.4
+  _squareMaxSpeed: 0
+  _squareAreaOfInfluencedRadius: 0
+  _sqaureAvoidanceRadius: 0

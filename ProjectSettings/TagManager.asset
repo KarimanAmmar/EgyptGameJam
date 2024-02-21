@@ -8,6 +8,8 @@ TagManager:
   - Egg
   - Enemy
   - Child
+  - bullet
+
   layers:
   - Default
   - TransparentFX
@@ -15,9 +17,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Obstacle
+  - MainPigeon
+  - Pigeon
   - 
   - 
   - 

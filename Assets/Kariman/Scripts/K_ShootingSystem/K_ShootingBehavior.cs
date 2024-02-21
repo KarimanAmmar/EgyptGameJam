@@ -7,25 +7,24 @@ namespace GameSystem.ShootingSystem
 {
     public class K_ShootingBehavior : MonoBehaviour
     {
-        private List<GameObject> babybirds = new List<GameObject>();
-        [SerializeField] float moveSpeed;
-
-
+        [SerializeField] private List<PigeonFlockAgent> babybirds = new List<PigeonFlockAgent>();
         private void Update()
         {
-             Shoot();
+            Shoot();
         }
         void Shoot()
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 CollectChildObjects();
-                foreach (GameObject babyBird in babybirds)
+                for (int i = 0; i < babybirds.Count; i++)
                 {
-                    if (babyBird.CompareTag("RedBird"))
+                    if (babybirds[i].gameObject.tag == "bullet")
                     {
-                        K_BirdBehavior behavior = babyBird.GetComponent<K_BirdBehavior>();
-                        behavior.canShoot = true;
+                        PigeonFlockAgent agentpigeon = babybirds[i].GetComponent<PigeonFlockAgent>();
+                        agentpigeon.MyPigeonFlock._pAgentsList.Remove(babybirds[i]);
+                        K_BirdBehavior FirePigeonManager = babybirds[i].GetComponent<K_BirdBehavior>();
+                        FirePigeonManager.canShoot = true;
                         Debug.Log("found");
                     }
                 }
@@ -34,10 +33,15 @@ namespace GameSystem.ShootingSystem
         void CollectChildObjects()
         {
             babybirds.Clear();
-            foreach (Transform child in transform)
+            for (int i = 0; i < transform.childCount; i++)
             {
-                babybirds.Add(child.gameObject);
-                Debug.Log("added");
+                Transform child = transform.GetChild(i);
+                PigeonFlockAgent pigeonFlockAgent = child.GetComponent<PigeonFlockAgent>();
+                if (pigeonFlockAgent != null)
+                {
+                    babybirds.Add(pigeonFlockAgent);
+                    Debug.Log("added");
+                }
             }
         }
     }

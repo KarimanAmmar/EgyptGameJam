@@ -7,7 +7,7 @@ public class PigeonFlock : MonoBehaviour
 {
     [SerializeField] LayerMask _pigeonLayer;
     public PigeonFlockAgent _pAgentPrefab;
-    List<PigeonFlockAgent> _pAgentsList= new List<PigeonFlockAgent>();
+    public List<PigeonFlockAgent> _pAgentsList= new List<PigeonFlockAgent>();
     public PigeonFlockBehaviour _pFlockBehaviour;
 
     [Range(2f, 500f)]
@@ -36,8 +36,8 @@ public class PigeonFlock : MonoBehaviour
     [HideInInspector]
     public float _sqaureAvoidanceRadius;
 
-    PigeonFlockAgent _currentSacrificialPigeon;
-    private int _currentSacrificialPigeonID;
+    public PigeonFlockAgent _currentSacrificialPigeon;
+    public int _currentSacrificialPigeonID;
     private Vector2 _directionToCenter;
     private void Start()
     {
@@ -151,10 +151,6 @@ public class PigeonFlock : MonoBehaviour
 
         _sacrificer.gameObject.GetComponent<Rigidbody2D>().velocity = _directionToCenter * _maxSpeed;
 
-
-
-
-        
     }
     void repel()
     {

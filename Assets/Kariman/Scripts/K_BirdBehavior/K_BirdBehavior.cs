@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class K_BirdBehavior : MonoBehaviour
 {
-    [SerializeField] float speed;
-
     public bool canShoot = false;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] Vector2 _fireSpeed;
 
     void Update()
     {
@@ -17,7 +17,7 @@ public class K_BirdBehavior : MonoBehaviour
     {
         if (canShoot==true)
         {
-            transform.Translate(speed * Time.deltaTime, 0, 0);
+            rb.velocity = _fireSpeed;
         }
     }
 }

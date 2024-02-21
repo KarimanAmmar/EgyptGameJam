@@ -290,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7622222152786768686, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7666082996960200783, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -367,7 +367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7622222152786768686, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7666082996960200783, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -423,9 +423,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3025873265169594145, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
+      propertyPath: _scaleMovement
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025873265169594145, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
       propertyPath: _pFlockBehaviour
       value: 
       objectReference: {fileID: 11400000, guid: 37ab6e46b42dd0840b1765183d99beea, type: 2}
+    - target: {fileID: 3025873265169594145, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
+      propertyPath: _pigeonLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 7622222152786768686, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
       propertyPath: m_Name
       value: OrganizedPigeonsManager

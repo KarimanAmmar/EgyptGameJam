@@ -13,7 +13,7 @@ public class StayInBorders : FilteredPigeonBehaviour
     public override Vector2 CalculateMovementBehaviour(PigeonFlockAgent _pAgent, List<Transform> _influencedPigeonAgents, PigeonFlock pFlock)
     {
         Vector2 _distanceFromPigeonToCenter=HordeController.instance.Center-(Vector2)_pAgent.transform.position;
-        float t = _distanceFromPigeonToCenter.magnitude / _radius;
+        float t = _distanceFromPigeonToCenter.magnitude / GameData.instance.FlockBorderRadius;
         if (t < _borderWeight)
         {
             return new Vector2(0,0);

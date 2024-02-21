@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Stay In Border10
   m_EditorClassIdentifier: 
   _neighborsFilter: {fileID: 11400000, guid: 38da58f7c979f3e42a5009148ee4cca4, type: 2}
-  _radius: 2.5
+  _radius: 2
   _borderWeight: 0.9

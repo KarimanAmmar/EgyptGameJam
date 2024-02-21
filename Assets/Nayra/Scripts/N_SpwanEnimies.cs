@@ -9,7 +9,7 @@ public class N_SpwanEnimies : MonoBehaviour
     private GameObject enemy;
     private int enemyCount =0;
 
-    public N_EnemyData enemyData;
+    [HideInInspector] public N_EnemyData enemyData;
 
     public List<GameObject> enemyPrefab;
 

@@ -27,8 +27,8 @@ public class PigeonFlockAgent : MonoBehaviour
     {
         if (_force == false) 
         {
-        transform.up = velocity;
-        PigeonAgentRidgidbody.velocity = velocity;
+            transform.up = velocity;
+            PigeonAgentRidgidbody.velocity = velocity;
         }
         else if( _force == true)
         {

@@ -16,7 +16,7 @@ public class BackgroundManager : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, position2.position, speed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, position2.position) < 0.02f)
+        if (Vector3.Distance(transform.position, position2.position) < 0.01f)
         {
             transform.position = position1.position;
         }

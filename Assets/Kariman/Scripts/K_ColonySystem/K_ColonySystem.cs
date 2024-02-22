@@ -24,7 +24,6 @@ public class K_ColonySystem : MonoBehaviour
     private void OnDisable()
     {
         eggEvent.GameAction -= ONINcreaceCounter;
-
     }
     void SoldEggScore()
     {
@@ -56,9 +55,10 @@ public class K_ColonySystem : MonoBehaviour
     }
     void AddPigeon()
     {
-        GameObject InstantiatedPigeon = Instantiate(pigeonPrefab, 
-            new Vector3(MainPigController.Center.x, MainPigController.Center.y, 0), Quaternion.identity);
+       PigeonFlockAgent newPigeon = Instantiate(pigeonFlock._pAgentPrefab, (UnityEngine.Random.insideUnitCircle * pigeonFlock._pAgentsList.Count * 0.08f) + HordeController.instance.Center,
+            Quaternion.Euler(Vector3.forward * UnityEngine.Random.Range(0f, 360f)),
+            pigeonFlock.gameObject.transform);
 
-        pigeonFlock._pAgentsList.Add(InstantiatedPigeon.GetComponent<PigeonFlockAgent>());
+        pigeonFlock._pAgentsList.Add(newPigeon);
     }
 }

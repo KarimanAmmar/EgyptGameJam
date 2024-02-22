@@ -120,7 +120,6 @@ GameObject:
   - component: {fileID: 8431029691970563530}
   - component: {fileID: 9120876615368887015}
   - component: {fileID: -3364031367866030663}
-
   m_Layer: 6
   m_Name: PigeonFlockAgentRed
   m_TagString: Untagged
@@ -241,7 +240,6 @@ MonoBehaviour:
   rb: {fileID: 3635894203690636377}
   _fireSpeed: {x: 5, y: 0}
 --- !u!114 &-3364031367866030663
-
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253,5 +251,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db4aeffe3d08ed4d9bf8cee17dbe934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Egg: {fileID: 5052940029898021144, guid: 64c6f7e71ed1831429e6d5689f1de05e, type: 3}
-
+  Egg: {fileID: 4049669334264192435, guid: 5a0a6e02346b1aa4db803049a8b07f18, type: 3}
+  colonySystemRef: {fileID: 0}

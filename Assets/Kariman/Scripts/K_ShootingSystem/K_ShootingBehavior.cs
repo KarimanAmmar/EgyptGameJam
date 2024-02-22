@@ -17,8 +17,7 @@ namespace GameSystem.ShootingSystem
             Vector2 shootPos = HordeController.instance.Center;
             shootPos.x += GameData.instance.FlockBorderRadius;
             if (Input.GetKeyDown(KeyCode.Space))
-            {//todo
-                
+            {
                 if (PigeonFlock.Instance._pAgentsList.Count > -1&&Vector2.Distance(PigeonFlock.Instance._currentSacrificialPigeon.transform.position, shootPos)<1)
                 {
                     CollectChildObjects();

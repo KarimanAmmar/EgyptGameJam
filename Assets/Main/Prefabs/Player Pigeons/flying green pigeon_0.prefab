@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 240949783991553523}
   - component: {fileID: 7756710715765155592}
   - component: {fileID: 6127982093727728120}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: flying green pigeon_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

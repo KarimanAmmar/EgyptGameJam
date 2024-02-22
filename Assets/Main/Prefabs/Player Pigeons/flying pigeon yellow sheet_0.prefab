@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7391038561952785239}
   - component: {fileID: 7609717865439093382}
   - component: {fileID: 6189883054429160039}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: flying pigeon yellow sheet_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

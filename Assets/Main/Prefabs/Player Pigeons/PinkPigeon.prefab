@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 7851354924430731405}
   - component: {fileID: 2332956211864800562}
   - component: {fileID: 8033743135244936640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PinkPigeon
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

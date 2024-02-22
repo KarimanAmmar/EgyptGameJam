@@ -50,7 +50,7 @@ public class N_SpwanEnimies : MonoBehaviour
 
         randomPrefab = enemyPrefab[Random.Range(0, enemyCount+1)];
 
-        float randomY = Random.Range(minY, minY);
+        float randomY = Random.Range(minY, maxY);
         Vector3 randomPosition = new Vector3(valX, randomY, 0f);
 
         // Log the spawn information
@@ -58,7 +58,8 @@ public class N_SpwanEnimies : MonoBehaviour
         namePrefab = randomPrefab.name;
 
 
-        enemy = Instantiate(randomPrefab, randomPosition, Quaternion.identity,this.transform);
+        //enemy = Instantiate(randomPrefab, randomPosition, Quaternion.identity,this.transform);
+        enemy = Instantiate(randomPrefab, randomPosition, Quaternion.Euler(0f,0f,90f) ,this.transform);
         enemyData = enemy.GetComponent<N_EnemyData>();
 
         /*float randomY = Random.Range(Screen.height, 0);
@@ -70,7 +71,7 @@ public class N_SpwanEnimies : MonoBehaviour
         Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            float randomSpeed = Random.Range(1f, 5f);
+            //float randomSpeed = Random.Range(1f, 5f);
             //rb.velocity = new Vector2(-randomSpeed , 0f);
             rb.velocity = new Vector2(- enemyData._speed, 0f);
         }

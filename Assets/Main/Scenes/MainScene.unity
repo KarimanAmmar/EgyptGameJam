@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 287378426}
   - component: {fileID: 287378427}
   m_Layer: 0
-  m_Name: Spwaner
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

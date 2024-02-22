@@ -32,6 +32,8 @@ public class N_EnemyData : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("MainPigeon"))
         {
+            Destroy(collision.gameObject);
+            N_GameUI.instance.LoseGame();
             //End Game Logic
         }
         

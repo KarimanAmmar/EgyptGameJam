@@ -24,6 +24,7 @@ public class K_ColonySystem : MonoBehaviour
     private void OnDisable()
     {
         eggEvent.GameAction -= ONINcreaceCounter;
+
     }
     void SoldEggScore()
     {
@@ -46,8 +47,11 @@ public class K_ColonySystem : MonoBehaviour
     }
     void ONINcreaceCounter()
     {
-        counter++;
-        SoldEggScore();
+        if (counter <= 5)
+        {
+            counter++;
+            SoldEggScore();
+        }
         Debug.Log(counter);
     }
     void AddPigeon()

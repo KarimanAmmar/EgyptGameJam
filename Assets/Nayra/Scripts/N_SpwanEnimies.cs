@@ -33,7 +33,7 @@ public class N_SpwanEnimies : MonoBehaviour
         randomPrefab = enemyPrefab[Random.Range(0, enemyCount+1)];
         float randomY = Random.Range(-5, 5);
         Vector3 randomPosition = new Vector3(5f, randomY, 0f);
-        enemy = Instantiate(randomPrefab, randomPosition, Quaternion.identity);
+        enemy = Instantiate(randomPrefab, randomPosition, Quaternion.identity,this.transform);
         enemyData = enemy.GetComponent<N_EnemyData>();
 
         /*float randomY = Random.Range(Screen.height, 0);
@@ -47,7 +47,7 @@ public class N_SpwanEnimies : MonoBehaviour
         {
             float randomSpeed = Random.Range(1f, 5f);
             //rb.velocity = new Vector2(-randomSpeed , 0f);
-            rb.velocity = new Vector2(- enemyData.Enemies.speed, 0f);
+            rb.velocity = new Vector2(- enemyData._speed, 0f);
         }
     }
 }

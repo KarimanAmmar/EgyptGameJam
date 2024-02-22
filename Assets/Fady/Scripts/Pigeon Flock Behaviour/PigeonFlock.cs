@@ -7,6 +7,7 @@ public class PigeonFlock : MonoBehaviour
 {
     [SerializeField] LayerMask _pigeonLayer;
     public PigeonFlockAgent _pAgentPrefab;
+    [HideInInspector]
     public List<PigeonFlockAgent> _pAgentsList= new List<PigeonFlockAgent>();
     public PigeonFlockBehaviour _pFlockBehaviour;
 
@@ -39,6 +40,15 @@ public class PigeonFlock : MonoBehaviour
     public PigeonFlockAgent _currentSacrificialPigeon;
     public int _currentSacrificialPigeonID;
     private Vector2 _directionToCenter;
+    public static PigeonFlock Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
     private void Start()
     {
         
@@ -79,10 +89,12 @@ public class PigeonFlock : MonoBehaviour
 
         repel();
         attract();
-        
-        
 
-        PositionTheSacrificer(_currentSacrificialPigeon);
+
+        if (_currentSacrificialPigeon)
+        {
+            PositionTheSacrificer(_currentSacrificialPigeon);
+        }
 
     }
     private void FixedUpdate()
@@ -119,7 +131,7 @@ public class PigeonFlock : MonoBehaviour
         }
         return influencedGameObejcts;
     }
-    PigeonFlockAgent ChoosePigeonToShootPigeon() 
+    public PigeonFlockAgent ChoosePigeonToShootPigeon() 
     {
 
 
@@ -134,12 +146,13 @@ public class PigeonFlock : MonoBehaviour
         //should be called when the sacrifice pigeon is killed event
         GameData.instance.CalculateFlockBorderRadius(_pAgentsList.Count);
 
+        _currentSacrificialPigeon = _sacrificialPigeon;
         return _sacrificialPigeon;
 
         
 
     }
-    void PositionTheSacrificer(PigeonFlockAgent _sacrificer)
+    public void PositionTheSacrificer(PigeonFlockAgent _sacrificer)
     {
 
         Vector2 _mainPigeonPos = HordeController.instance.Center;
@@ -161,7 +174,7 @@ public class PigeonFlock : MonoBehaviour
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
             //Debug.Log(mousePos);
             List<GameObject> influencedGameObjects = GetNearByObejcts(mousePos);
-            Debug.Log(influencedGameObjects.Count);
+            //Debug.Log(influencedGameObjects.Count);
             foreach (var gameObject in influencedGameObjects)
             {
                 Vector2 _distanceFromPigeonToCenter = (Vector2)gameObject.transform.position - mousePos;
@@ -183,9 +196,9 @@ public class PigeonFlock : MonoBehaviour
             Debug.Log("here");
             Vector2 mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-            Debug.Log(mousePos);
+            //Debug.Log(mousePos);
             List<GameObject> influencedGameObjects = GetNearByObejcts(mousePos);
-            Debug.Log(influencedGameObjects.Count);
+            //Debug.Log(influencedGameObjects.Count);
             foreach (var gameObject in influencedGameObjects)
             {
                 Vector2 _distanceFromPigeonToCenter = mousePos - (Vector2)gameObject.transform.position;

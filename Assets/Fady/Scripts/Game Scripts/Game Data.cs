@@ -33,10 +33,12 @@ public class GameData : MonoBehaviour
     }
     public void CalculateFlockBorderRadius(int currentFlockCount)
     {
-
-        _flockBorderRadius = currentFlockCount / 10f;
-        Debug.Log("flock count"+currentFlockCount);
-        Debug.Log(currentFlockCount / 10);
+        if (currentFlockCount > 0)
+        {
+            _flockBorderRadius = currentFlockCount / 8f;
+            //Debug.Log("flock count" + currentFlockCount);
+            //Debug.Log(currentFlockCount / 10);
+        }
         
 
     }

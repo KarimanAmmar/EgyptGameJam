@@ -8,7 +8,7 @@ public class N_SpwanEnimies : MonoBehaviour
     public static N_SpwanEnimies instance;
 
     private GameObject randomPrefab;
-    private GameObject enemy;
+    internal GameObject enemy;
     private int enemyCount =0;
     public bool isSpawning = false;
     public string namePrefab;
@@ -23,6 +23,10 @@ public class N_SpwanEnimies : MonoBehaviour
 
     [SerializeField] private float spwanRate = 2f;
     [SerializeField] private int waveTime = 20;
+
+    [SerializeField] GameEvents _checkEnemy;
+
+    //public GameObject Enemy { get => enemy; set => enemy = value; }
 
     private void Awake()
     {
@@ -46,7 +50,6 @@ public class N_SpwanEnimies : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        isSpawning = true;
 
         randomPrefab = enemyPrefab[Random.Range(0, enemyCount+1)];
 
@@ -54,12 +57,14 @@ public class N_SpwanEnimies : MonoBehaviour
         Vector3 randomPosition = new Vector3(valX, randomY, 0f);
 
         // Log the spawn information
-        Debug.Log("Spawned enemy prefab: " + randomPrefab.name + " at position: " + randomPosition);
+        //Debug.Log("Spawned enemy prefab: " + randomPrefab.name + " at position: " + randomPosition);
         namePrefab = randomPrefab.name;
+
 
         enemy = Instantiate(randomPrefab, randomPosition, Quaternion.identity,this.transform);
         enemyData = enemy.GetComponent<N_EnemyData>();
 
+        _checkEnemy.GameAction?.Invoke();
         /*float randomY = Random.Range(Screen.height, 0);
         Vector3 randomScreenPosition = new Vector3(Screen.width, randomY, 10);
         Vector3 randomPosition = Camera.main.ScreenToWorldPoint(randomScreenPosition);

@@ -8,7 +8,7 @@ public class BackgroundManager : MonoBehaviour
     [SerializeField] Transform position2;
     [SerializeField] float speed = 1.0f;
 
-    void Update()
+    void FixedUpdate()
     {
         BackGroundMovements();
     }
@@ -16,7 +16,7 @@ public class BackgroundManager : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, position2.position, speed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, position2.position) < 0.01f)
+        if (Vector3.Distance(transform.position, position2.position) < 0.02f)
         {
             transform.position = position1.position;
         }

@@ -217,8 +217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d167855d49084524c9dc381e99604f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pigeonHealth: 1
-  _timeToEvolve: 1000
+  _pigeonHealth: 3
+  _timeToEvolve: 10
   _SkinColor:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}

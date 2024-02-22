@@ -8,7 +8,7 @@ public class PigeonFlockAgent : MonoBehaviour
     [Range(1f, 10f)]
     public int _pigeonHealth=1;
     [SerializeField] float _timeToEvolve = 10;
-    [SerializeField] List<Color> _SkinColor;
+    public List<Color> _SkinColor;
 
     Collider2D _pAgentCollider;
     Rigidbody2D _pAgentRigidbody;
@@ -81,8 +81,11 @@ public class PigeonFlockAgent : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(_timeToEvolve);
-            _pigeonHealth++;
-            EvolveSkin();
+            if (_pigeonHealth < 4)
+            {
+                _pigeonHealth++;
+                EvolveSkin();
+            }
         }
     }
     void EvolveSkin()
@@ -96,8 +99,8 @@ public class PigeonFlockAgent : MonoBehaviour
         {
             case 1: PigeonSkin.color = _SkinColor[_pigeonHealth-1]; break;
             case 2: PigeonSkin.color = _SkinColor[_pigeonHealth-1]; break;
-            case 3: PigeonSkin.color = _SkinColor[_pigeonHealth-1]; break;
-            case 4: PigeonSkin.color = _SkinColor[_pigeonHealth-1]; break;
+            case 3: PigeonSkin.color = Color.blue; break;
+            case 4: PigeonSkin.color = Color.black; break;
             
         }
     }

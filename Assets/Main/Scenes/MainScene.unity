@@ -468,7 +468,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7622222152786768686, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1637111755}
   m_SourcePrefab: {fileID: 100100000, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
 --- !u!1001 &902902366
 PrefabInstance:
@@ -729,6 +732,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1637111752 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7622222152786768686, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
+  m_PrefabInstance: {fileID: 595133489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1637111755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637111752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aee43944f49db64aa629b26dcf6fc50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  babybirds: []
 --- !u!1 &1816287109
 GameObject:
   m_ObjectHideFlags: 0

@@ -88,6 +88,10 @@ public class PigeonFlockAgent : MonoBehaviour
     void EvolveSkin()
     {
         SpriteRenderer PigeonSkin=this.gameObject.GetComponentInChildren<SpriteRenderer>();
+        if (this.gameObject.tag == "bullet")
+        {
+            return;
+        }
         switch(_pigeonHealth)
         {
             case 1: PigeonSkin.color = _SkinColor[_pigeonHealth-1]; break;

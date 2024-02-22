@@ -15,7 +15,6 @@ public class K_CollectManager : MonoBehaviour
             if (colonySystem.counter + 1 <= maxCount)
             {
                 colonySystem.counter++;
-                colonySystem.ChangeColorAlpha = true;
             }
         }
     }

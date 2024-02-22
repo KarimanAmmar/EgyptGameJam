@@ -10,7 +10,7 @@ public class K_ColonySystem : MonoBehaviour
     [SerializeField] List<Image> RewardEggs;
     [SerializeField] GameEvents eggEvent;
 
-    int counter=-1; 
+    public int counter=-1; 
 
     [SerializeField] HordeController MainPigController;
     [SerializeField] GameObject pigeonPrefab;

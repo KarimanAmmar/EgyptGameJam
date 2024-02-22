@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3179528255444924397}
   - component: {fileID: 3542989186124315389}
   - component: {fileID: -2172602897846334851}
-  - component: {fileID: 5711099842344451233}
+  - component: {fileID: 2047281733140964615}
   m_Layer: 0
   m_Name: egg (1)
   m_TagString: Egg
@@ -243,3 +243,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eggEvent: {fileID: 11400000, guid: e3dba15da8b977849bb3677435f282af, type: 2}
+--- !u!114 &2047281733140964615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5052940029898021144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf59686edadbcf4995c1a09df94f98e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colonySystem: {fileID: 0}

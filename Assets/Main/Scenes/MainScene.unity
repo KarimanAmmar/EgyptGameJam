@@ -832,6 +832,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   babybirds: []
+--- !u!114 &336748343 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3025873265169594145, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
+  m_PrefabInstance: {fileID: 336748340}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336748341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b31332814f298f4fabe7bd13b3fe8df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &375068151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,11 +1328,12 @@ MonoBehaviour:
   - {fileID: 1846876711}
   - {fileID: 419643318}
   eggEvent: {fileID: 11400000, guid: e3dba15da8b977849bb3677435f282af, type: 2}
+  counter: -1
   MainPigController: {fileID: 117796522}
   pigeonPrefab: {fileID: 7703768484301726517, guid: 623a0b1b0fe9c1f4b9bb14790682b431, type: 3}
   soledEgg: {fileID: 21300000, guid: 7ad973ff01e510f4181a1fa93bcdccf0, type: 3}
   Faddedegg: {fileID: 21300000, guid: 3e1529ec44649934c99bc7b794546a2b, type: 3}
-  pigeonFlock: {fileID: 0}
+  pigeonFlock: {fileID: 336748343}
 --- !u!4 &895550552
 Transform:
   m_ObjectHideFlags: 0

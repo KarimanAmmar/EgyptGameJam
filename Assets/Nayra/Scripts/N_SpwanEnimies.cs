@@ -10,7 +10,6 @@ public class N_SpwanEnimies : MonoBehaviour
     private GameObject randomPrefab;
     internal GameObject enemy;
     private int enemyCount =0;
-    public bool isSpawning = false;
     public string namePrefab;
 
     [HideInInspector] public N_EnemyData enemyData;
@@ -25,8 +24,6 @@ public class N_SpwanEnimies : MonoBehaviour
     [SerializeField] private int waveTime = 20;
 
     [SerializeField] GameEvents _checkEnemy;
-
-    //public GameObject Enemy { get => enemy; set => enemy = value; }
 
     private void Awake()
     {
@@ -79,6 +76,5 @@ public class N_SpwanEnimies : MonoBehaviour
         }
 
         _checkEnemy.GameAction?.Invoke();
-        //isSpawning = false;
     }
 }

@@ -5,8 +5,13 @@ using UnityEngine;
 public class N_checkEnemy : MonoBehaviour
 {
     [SerializeField] private GameEvents _checkEnemy;
+    [SerializeField] private GameObject _WeekPanel;
+    [SerializeField] private GameObject _strongPanel;
 
     private bool isPaused = false;
+    private bool Week = true;
+    private bool strong = true;
+
     private void OnEnable()
     {
         _checkEnemy.GameAction += EnemySpawned;
@@ -16,69 +21,52 @@ public class N_checkEnemy : MonoBehaviour
         _checkEnemy.GameAction -= EnemySpawned;
     }
 
-    private void Start()
-    {
-        isPaused = false;
-    }
-    // Update is called once per frame
     void Update()
     {
-        /*Debug.Log("yutu");
-        if(N_SpwanEnimies.instance.isSpawning == true)
-        {
-            Debug.Log("Check Spawned Enemy" + N_SpwanEnimies.instance.namePrefab);
-        }*/
-
-        /*if (isPaused)
-        {
-            Time.timeScale = 0;
-            StartCoroutine(PauseAndResume(4f));
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }*/
-
         if (N_SpwanEnimies.instance.enemy != null && N_SpwanEnimies.instance.enemy.transform.localPosition.x <= -4f && isPaused == false)
         {
-            Time.timeScale = 0;
-            isPaused = true;
+            /*Time.timeScale = 0;
+            isPaused = true;*/
+            checkforPausing();
         }
         if(Input.GetKeyDown(KeyCode.A))
         {
             Time.timeScale = 1;
+            _WeekPanel.SetActive(false);
+            _strongPanel.SetActive(false);
+        }
+        if(Time.time >= 40)
+        {
+            N_GameUI.instance.MainMenu();
+        }
+    }
+
+    void checkforPausing()
+    {
+        if (N_SpwanEnimies.instance.namePrefab == "Square")
+        {
+            if (Week == true)
+            {
+                Time.timeScale = 0;
+                _WeekPanel.SetActive(true);
+                isPaused = true;
+                Week = false;
+            }
+        }
+        if (N_SpwanEnimies.instance.namePrefab == "Circle")
+        {
+            if (strong == true)
+            {
+                Time.timeScale = 0;
+                _strongPanel.SetActive(true);
+                isPaused = true;
+                strong = false;
+            }
         }
 
-        /*if (isPaused)
-        {
-            // Check if the spawned enemy's position is less than or equal to -4 on the x-axis
-            if (N_SpwanEnimies.instance.enemy != null && N_SpwanEnimies.instance.enemy.transform.localPosition.x <= -4f)
-            {
-                // Pause the game
-                //N_GameUI.instance.PauseGame();
-                //StartCoroutine(LoadingLevel());
-                StartCoroutine(PauseAndResume(4f));
-            }
-        }*/
     }
     public void EnemySpawned()
     {
         isPaused = false;
-        //Debug.Log("Check Spawned Enemy" + N_SpwanEnimies.instance.namePrefab);
-        if (N_SpwanEnimies.instance.namePrefab == "Square")
-        {
-            Debug.Log("enemy pos ========= " + N_SpwanEnimies.instance.enemy.transform.position.x);
-            /*if (N_SpwanEnimies.instance.enemy.transform.position.x <= -4f)
-            {
-                Debug.Log("--------It is square -----------");
-                N_GameUI.instance.PauseGame();
-            }*/
-
-        }
-        if(N_SpwanEnimies.instance.namePrefab == "Circle")
-        {
-            Debug.Log("***********It is Circle *************");
-        }
-
     }
 }

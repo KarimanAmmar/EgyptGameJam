@@ -64,7 +64,6 @@ public class N_SpwanEnimies : MonoBehaviour
         enemy = Instantiate(randomPrefab, randomPosition, Quaternion.identity,this.transform);
         enemyData = enemy.GetComponent<N_EnemyData>();
 
-        _checkEnemy.GameAction?.Invoke();
         /*float randomY = Random.Range(Screen.height, 0);
         Vector3 randomScreenPosition = new Vector3(Screen.width, randomY, 10);
         Vector3 randomPosition = Camera.main.ScreenToWorldPoint(randomScreenPosition);
@@ -79,6 +78,7 @@ public class N_SpwanEnimies : MonoBehaviour
             rb.velocity = new Vector2(- enemyData._speed, 0f);
         }
 
+        _checkEnemy.GameAction?.Invoke();
         //isSpawning = false;
     }
 }

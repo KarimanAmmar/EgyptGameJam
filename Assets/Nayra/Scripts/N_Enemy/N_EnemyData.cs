@@ -12,7 +12,7 @@ public class N_EnemyData : MonoBehaviour
     public int _speed;
     private void Awake()
     {
-        Debug.Log("Start");
+        //Debug.Log("Start");
         Debug.Log(enemies.name + enemies.damage + enemies.maxHealth + enemies.speed);
         _enemyName = enemies.enemyName;
         _damage = enemies.damage;
@@ -25,7 +25,7 @@ public class N_EnemyData : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log("enemy Health"+_maxHealth);
+        //Debug.Log("enemy Health"+_maxHealth);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -15,18 +15,24 @@ namespace GameSystem.ShootingSystem
         void Shoot()
         {
             if (Input.GetKeyDown(KeyCode.Space))
-            {
-                CollectChildObjects();
-                for (int i = 0; i < babybirds.Count; i++)
+            {//todo
+                Vector2 shootPos = HordeController.instance.Center;
+                shootPos.x = +GameData.instance.FlockBorderRadius;
+                if (PigeonFlock.Instance._pAgentsList.Count > -1&&Vector2.Distance(PigeonFlock.Instance._currentSacrificialPigeon.transform.position, shootPos)<1)
                 {
-                    if (babybirds[i].gameObject.tag == "bullet")
+                    CollectChildObjects();
+                    for (int i = 0; i < babybirds.Count; i++)
                     {
-                        PigeonFlockAgent agentpigeon = babybirds[i].GetComponent<PigeonFlockAgent>();
-                        agentpigeon.MyPigeonFlock._pAgentsList.Remove(babybirds[i]);
-                        K_BirdBehavior FirePigeonManager = babybirds[i].GetComponent<K_BirdBehavior>();
-                        FirePigeonManager.canShoot = true;
-                        Debug.Log("found");
+                        if (babybirds[i].gameObject.tag == "bullet")
+                        {
+                            PigeonFlockAgent agentpigeon = babybirds[i].GetComponent<PigeonFlockAgent>();
+                            agentpigeon.MyPigeonFlock._pAgentsList.Remove(babybirds[i]);
+                            K_BirdBehavior FirePigeonManager = babybirds[i].GetComponent<K_BirdBehavior>();
+                            FirePigeonManager.canShoot = true;
+                            Debug.Log("found");
+                        }
                     }
+                    PigeonFlock.Instance._currentSacrificialPigeon = PigeonFlock.Instance.ChoosePigeonToShootPigeon();
                 }
             }
         }

@@ -28,6 +28,9 @@ public class PigeonFlock : MonoBehaviour
     [Header("PlayerAbilities")]
     [SerializeField] float _impulseRadius = 1;
     [SerializeField] float _impulsePowerScale = 10;
+    [SerializeField] float _attractRadius = 1;
+    [SerializeField] float _attractPowerScale = 10;
+
     [SerializeField] StayInBorders _pigeonBorder;
 
 
@@ -59,7 +62,7 @@ public class PigeonFlock : MonoBehaviour
 
         for (int i = 0; i < _startingCount; i++)
         {
-            PigeonFlockAgent newPigeon = Instantiate(_pAgentPrefab, UnityEngine.Random.insideUnitCircle * _startingCount * _agentDensity, Quaternion.Euler(Vector3.forward * UnityEngine.Random.Range(0f, 360f)), this.transform);
+            PigeonFlockAgent newPigeon = Instantiate(_pAgentPrefab, (UnityEngine.Random.insideUnitCircle * _pAgentsList.Count * _agentDensity)+HordeController.instance.Center, Quaternion.Euler(Vector3.forward * UnityEngine.Random.Range(0f, 360f)), this.transform);
 
             newPigeon.name = "Pigeon " + i;
             newPigeon.InitializePigeonFlock(this);
@@ -132,6 +135,19 @@ public class PigeonFlock : MonoBehaviour
         }
         return influencedGameObejcts;
     }
+    public List<GameObject> GetNearByAttractObejcts(Vector2 point)
+    {
+        List<GameObject> influencedGameObejcts = new List<GameObject>();
+        Collider2D[] _nearByGameObjectsColliders = Physics2D.OverlapCircleAll(point, _attractRadius, _pigeonLayer);
+
+        foreach (var nearByPigeon in _nearByGameObjectsColliders)
+        {
+
+            influencedGameObejcts.Add(nearByPigeon.gameObject);
+
+        }
+        return influencedGameObejcts;
+    }
     public PigeonFlockAgent ChoosePigeonToShootPigeon() 
     {
 
@@ -198,19 +214,19 @@ public class PigeonFlock : MonoBehaviour
             Vector2 mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
             //Debug.Log(mousePos);
-            List<GameObject> influencedGameObjects = GetNearByObejcts(mousePos);
+            List<GameObject> influencedGameObjects = GetNearByAttractObejcts(mousePos);
             //Debug.Log(influencedGameObjects.Count);
             foreach (var gameObject in influencedGameObjects)
             {
                 Vector2 _distanceFromPigeonToCenter = mousePos - (Vector2)gameObject.transform.position;
-                float t = _impulseRadius + 3 / _distanceFromPigeonToCenter.magnitude;
+                float t = _attractRadius + 3 / _distanceFromPigeonToCenter.magnitude;
                 //if (t < _borderWeight)
                 //{
                 //    return new Vector2(0, 0);
                 //}
                 if (t > 1)
 
-                    gameObject.GetComponent<PigeonFlockAgent>().Move(((_distanceFromPigeonToCenter * t)), false);
+                    gameObject.GetComponent<PigeonFlockAgent>().Move(((_distanceFromPigeonToCenter * t)*_attractPowerScale), false);
             }
         }
     }

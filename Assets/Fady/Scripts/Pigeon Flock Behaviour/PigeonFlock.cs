@@ -210,7 +210,6 @@ public class PigeonFlock : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            Debug.Log("here");
             Vector2 mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
             //Debug.Log(mousePos);

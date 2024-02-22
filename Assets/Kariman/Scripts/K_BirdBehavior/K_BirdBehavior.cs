@@ -18,6 +18,7 @@ public class K_BirdBehavior : MonoBehaviour
         if (canShoot==true)
         {
             rb.velocity = _fireSpeed;
+            canShoot = false;
         }
     }
 }

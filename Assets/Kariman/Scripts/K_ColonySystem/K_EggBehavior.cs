@@ -10,8 +10,8 @@ public class K_EggBehavior : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Pigeon") ||
             other.gameObject.layer == LayerMask.NameToLayer("MainPigeon"))
         {
-            eggEvent.GameAction?.Invoke();
             Destroy(this.gameObject);
+            eggEvent.GameAction?.Invoke();
         }
     }
     private void Start()

@@ -30,22 +30,22 @@ public class K_ColonySystem : MonoBehaviour
     }
     void SoldEggScore()
     {
-        if (counter <4)
+        if (counter <5)
         {
-            RewardEggs[counter].GetComponent<Image>().sprite = soledEgg;
+            RewardEggs[counter].sprite = soledEgg;
             StartCoroutine(FadeEggScore());
         }
     }
     IEnumerator FadeEggScore()
     {
-        yield return new WaitForSeconds(7);
-        RewardEggs[counter].GetComponent<Image>().sprite = Faddedegg;
+        yield return new WaitForSeconds(20);
+        RewardEggs[counter].sprite = Faddedegg;
         AddPigeon();
         if (counter >= 0)
         {
             counter--;
         }
-        Debug.Log("Counter"+counter);
+        Debug.Log("Counter "+counter);
     }
     void ONINcreaceCounter()
     {
@@ -54,7 +54,7 @@ public class K_ColonySystem : MonoBehaviour
             counter++;
             SoldEggScore();
         }
-        Debug.Log(counter);
+        Debug.Log("counter" +counter);
     }
     void AddPigeon()
     {

@@ -27,7 +27,7 @@ public class K_BirdBehavior : MonoBehaviour
         if (distanceX <= 1.5)
         {
             InstantiatePigeon.GameAction?.Invoke();
-            PigeonFlock.Instance._pAgentsList.Remove(this.gameObject.GetComponent<PigeonFlockAgent>());
+           // PigeonFlock.Instance._pAgentsList.Remove(this.gameObject.GetComponent<PigeonFlockAgent>());
             Destroy(this.gameObject);
         }
     }

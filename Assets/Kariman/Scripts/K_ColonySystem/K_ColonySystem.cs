@@ -21,7 +21,7 @@ public class K_ColonySystem : MonoBehaviour
     private void OnEnable()
     {
         eggEvent.GameAction += ONINcreaceCounter;
-       InstantiateEvent.GameAction += AddPigeon;
+        InstantiateEvent.GameAction += AddPigeon;
     }
     private void OnDisable()
     {

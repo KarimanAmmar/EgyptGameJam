@@ -56,7 +56,7 @@ public class N_checkEnemy : MonoBehaviour
 
     void checkforPausing()
     {
-        if (N_SpwanEnimies.instance.namePrefab == "Square")
+        if (N_SpwanEnimies.instance.namePrefab == "sprites for crow_0")
         {
             if (Week == true)
             {
@@ -66,7 +66,7 @@ public class N_checkEnemy : MonoBehaviour
                 Week = false;
             }
         }
-        if (N_SpwanEnimies.instance.namePrefab == "Circle")
+        if (N_SpwanEnimies.instance.namePrefab == "vulture sprite sheet_0")
         {
             if (strong == true)
             {

@@ -5,23 +5,40 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class N_SpwanEnimies : MonoBehaviour
 {
+    public static N_SpwanEnimies instance;
+
     private GameObject randomPrefab;
-    private GameObject enemy;
+    internal GameObject enemy;
     private int enemyCount =0;
+    public string namePrefab;
 
     [HideInInspector] public N_EnemyData enemyData;
 
     public List<GameObject> enemyPrefab;
 
+    [SerializeField] private int minY = -4;
+    [SerializeField] private int maxY = 4;
+    [SerializeField] private float valX = 10f;
+
+    [SerializeField] private float spwanRate = 2f;
+    [SerializeField] private int waveTime = 20;
+
+    [SerializeField] GameEvents _checkEnemy;
+
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+    }
+
     private void Start()
     {
-        
-        InvokeRepeating("SpawnEnemy", 2f, 2f);
+        InvokeRepeating("SpawnEnemy", 2f, spwanRate);
     }
 
     private void Update()
     {
-        if (Time.time > 20 && enemyCount == 0)
+        if (Time.time > waveTime && enemyCount == 0)
         {
             enemyCount = 1;
         }
@@ -30,10 +47,19 @@ public class N_SpwanEnimies : MonoBehaviour
 
     private void SpawnEnemy()
     {
+
         randomPrefab = enemyPrefab[Random.Range(0, enemyCount+1)];
-        float randomY = Random.Range(-5, 5);
-        Vector3 randomPosition = new Vector3(5f, randomY, 0f);
-        enemy = Instantiate(randomPrefab, randomPosition, Quaternion.identity,this.transform);
+
+        float randomY = Random.Range(minY, maxY);
+        Vector3 randomPosition = new Vector3(valX, randomY, 0f);
+
+        // Log the spawn information
+        //Debug.Log("Spawned enemy prefab: " + randomPrefab.name + " at position: " + randomPosition);
+        namePrefab = randomPrefab.name;
+
+
+        //enemy = Instantiate(randomPrefab, randomPosition, Quaternion.identity,this.transform);
+        enemy = Instantiate(randomPrefab, randomPosition, Quaternion.Euler(0f,0f,90f) ,this.transform);
         enemyData = enemy.GetComponent<N_EnemyData>();
 
         /*float randomY = Random.Range(Screen.height, 0);
@@ -45,9 +71,11 @@ public class N_SpwanEnimies : MonoBehaviour
         Rigidbody2D rb = enemy.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            float randomSpeed = Random.Range(1f, 5f);
+            //float randomSpeed = Random.Range(1f, 5f);
             //rb.velocity = new Vector2(-randomSpeed , 0f);
             rb.velocity = new Vector2(- enemyData._speed, 0f);
         }
+
+        _checkEnemy.GameAction?.Invoke();
     }
 }

@@ -6,13 +6,9 @@ using UnityEngine;
 public class K_RewardManager : MonoBehaviour
 {
     [SerializeField] GameObject Egg;
-    private void OnTriggerEnter2D(Collider2D other)
+
+    public void InstantiateEgg(Transform DiedPigeonPos)
     {
-        if (other.gameObject.tag == "Enemy")
-        {
-             Transform instanciatepos = other.transform;
-             Instantiate(Egg, instanciatepos.position, Quaternion.identity);
-             Destroy(other.gameObject);
-        }
+        Instantiate(Egg, DiedPigeonPos.position, Quaternion.identity);
     }
 }

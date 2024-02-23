@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/UI/UI_Scene/MainMenu.unity
     guid: 329107b42f83dd84b83d239d8fba8d84
   - enabled: 1
-    path: Assets/Main/Scenes/MainScene.unity
+    path: Assets/Main/Scenes/GameScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Nayra/Scenes/N_TutorialScene.unity
+    guid: 639fc33169bc93f47adde6b6b0f15f75
   m_configObjects: {}

@@ -14,11 +14,11 @@ namespace GameSystem.ShootingSystem
         }
         void Shoot()
         {
+            Vector2 shootPos = HordeController.instance.Center;
+            shootPos.x += GameData.instance.FlockBorderRadius;
             if (Input.GetKeyDown(KeyCode.Space))
-            {//todo
-                Vector2 shootPos = HordeController.instance.Center;
-                shootPos.x = +GameData.instance.FlockBorderRadius;
-                if (PigeonFlock.Instance._pAgentsList.Count > -1&&Vector2.Distance(PigeonFlock.Instance._currentSacrificialPigeon.transform.position, shootPos)<1)
+            {
+                if (PigeonFlock.Instance._pAgentsList.Count > -1&&PigeonFlock.Instance._currentSacrificialPigeon&&Vector2.Distance(PigeonFlock.Instance._currentSacrificialPigeon.transform.position, shootPos)<1)
                 {
                     CollectChildObjects();
                     for (int i = 0; i < babybirds.Count; i++)
@@ -29,10 +29,23 @@ namespace GameSystem.ShootingSystem
                             agentpigeon.MyPigeonFlock._pAgentsList.Remove(babybirds[i]);
                             K_BirdBehavior FirePigeonManager = babybirds[i].GetComponent<K_BirdBehavior>();
                             FirePigeonManager.canShoot = true;
+                            //shoot logic related here
+                            AudioManager.instance.PlayerSFX(AudioManager.instance.shoot);
+                           // Animator animator = babybirds[i].gameObject.GetComponent<Animator>();
+                            //animator.SetBool("Shoot", true);
+                           
                             Debug.Log("found");
                         }
                     }
-                    PigeonFlock.Instance._currentSacrificialPigeon = PigeonFlock.Instance.ChoosePigeonToShootPigeon();
+                    if (PigeonFlock.Instance._pAgentsList.Count > 0)
+                    {
+                        PigeonFlock.Instance._currentSacrificialPigeon = PigeonFlock.Instance.ChoosePigeonToShootPigeon();
+                    }
+                    else
+                    {
+                        PigeonFlock.Instance._currentSacrificialPigeon=null;
+
+                    }
                 }
             }
         }

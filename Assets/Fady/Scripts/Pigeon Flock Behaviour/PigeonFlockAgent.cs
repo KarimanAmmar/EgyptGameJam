@@ -98,10 +98,6 @@ public class PigeonFlockAgent : MonoBehaviour
     {
         Animator PigeonSkin=this.gameObject.GetComponentInChildren<Animator>();
         
-        if (this.gameObject.tag == "bullet")
-        {
-            return;
-        }
         switch(_pigeonHealth)
         {
             

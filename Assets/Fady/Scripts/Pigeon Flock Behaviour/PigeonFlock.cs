@@ -158,7 +158,7 @@ public class PigeonFlock : MonoBehaviour
         _sacrificialPigeon = _pAgentsList[_currentSacrificialPigeonID];
 
         _sacrificialPigeon.gameObject.tag = "bullet";
-        _sacrificialPigeon.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+       // _sacrificialPigeon.GetComponentInChildren<SpriteRenderer>().color = Color.red;
         _pAgentsList.Remove(_pAgentsList[_currentSacrificialPigeonID]);
         //should be called when the sacrifice pigeon is killed event
         GameData.instance.CalculateFlockBorderRadius(_pAgentsList.Count);

@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Child
   - bullet
+  - End
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ public class K_EggBehavior : MonoBehaviour
     }
     private void Update()
     {
-        if (Time.time > 4)
+        if (Time.time > 10f)
         {
             Destroy(this.gameObject);
         }

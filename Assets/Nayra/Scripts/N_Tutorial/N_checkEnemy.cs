@@ -5,10 +5,13 @@ using UnityEngine;
 public class N_checkEnemy : MonoBehaviour
 {
     [SerializeField] private GameEvents _checkEnemy;
+    [SerializeField] private GameEvents PauseGame;
     [SerializeField] private GameObject _WeekPanel;
     [SerializeField] private GameObject _strongPanel;
+    [SerializeField] private GameObject _startPanel;
 
     private bool isPaused = false;
+    private bool startPause = false;
     private bool Week = true;
     private bool strong = true;
 
@@ -20,25 +23,35 @@ public class N_checkEnemy : MonoBehaviour
     {
         _checkEnemy.GameAction -= EnemySpawned;
     }
-
     void Update()
     {
+        if(Time.time >= 2f && startPause ==  false)
+        {
+            PauseGame.GameAction?.Invoke();
+            _startPanel.SetActive(true);
+            startPause = true;
+        }
         if (N_SpwanEnimies.instance.enemy != null && N_SpwanEnimies.instance.enemy.transform.localPosition.x <= -4f && isPaused == false)
         {
             /*Time.timeScale = 0;
             isPaused = true;*/
             checkforPausing();
+            Debug.Log("Paused");
         }
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.Z))
         {
-            Time.timeScale = 1;
+            //Time.timeScale = 1;
+            N_GameUI.instance.ResumeGame();
             _WeekPanel.SetActive(false);
             _strongPanel.SetActive(false);
+            _startPanel.SetActive(false);
         }
-        if(Time.time >= 40)
+
+        if (Time.time >= 60)
         {
             N_GameUI.instance.MainMenu();
         }
+
     }
 
     void checkforPausing()
@@ -47,7 +60,7 @@ public class N_checkEnemy : MonoBehaviour
         {
             if (Week == true)
             {
-                Time.timeScale = 0;
+                PauseGame.GameAction?.Invoke();
                 _WeekPanel.SetActive(true);
                 isPaused = true;
                 Week = false;
@@ -57,7 +70,7 @@ public class N_checkEnemy : MonoBehaviour
         {
             if (strong == true)
             {
-                Time.timeScale = 0;
+                PauseGame.GameAction?.Invoke();
                 _strongPanel.SetActive(true);
                 isPaused = true;
                 strong = false;

@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc7dfb81fbae6740b054ffa878ab1a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: {fileID: 11400000, guid: 3b600259e0d2744439d15ffec397039a, type: 2}
+  enemies: {fileID: 11400000, guid: a6e1c4064d8c7b544a32016113d62e59, type: 2}
   _enemyName: 
   _damage: 0
   _maxHealth: 0

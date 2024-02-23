@@ -29,6 +29,8 @@ namespace GameSystem.ShootingSystem
                             agentpigeon.MyPigeonFlock._pAgentsList.Remove(babybirds[i]);
                             K_BirdBehavior FirePigeonManager = babybirds[i].GetComponent<K_BirdBehavior>();
                             FirePigeonManager.canShoot = true;
+                            //shoot logic related here
+                            AudioManager.instance.PlayerSFX(AudioManager.instance.shoot);
                             Debug.Log("found");
                         }
                     }

@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1399683842, guid: e24fc52579e91bc4eaae107c939acac0, type: 3}
-  m_Color: {r: 0.57402086, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -218,12 +218,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pigeonHealth: 1
-  _timeToEvolve: 10
+  _timeToEvolve: 5
   _SkinColor:
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 0}
-  - {r: 1, g: 1, b: 1, a: 0}
+  - {fileID: 9100000, guid: 95bf963bdd824ab4c8d2d0be1be3586b, type: 2}
+  - {fileID: 9100000, guid: 835206eb930ec4f489921205f31a39c6, type: 2}
+  - {fileID: 9100000, guid: b45b9186807e27b4091fb015ff335775, type: 2}
 --- !u!114 &9120876615368887015
 MonoBehaviour:
   m_ObjectHideFlags: 0

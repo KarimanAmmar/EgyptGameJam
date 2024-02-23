@@ -8,6 +8,9 @@ public class HordeController : MonoBehaviour
 {
     [SerializeField]
     private float _moveSpeed = 1;
+
+    [SerializeField] Transform BLBoundry;
+    [SerializeField] Transform URBoundry;
     private Vector2 _moveDirection = Vector2.zero;
     
     private Vector2 _center;
@@ -36,6 +39,29 @@ public class HordeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (transform.position.x < BLBoundry.position.x)
+        {
+            transform.position = new Vector2(BLBoundry.position.x, transform.position.y);
+            _center = transform.position;
+        }
+        else if (transform.position.x > URBoundry.position.x)
+        {
+            transform.position = new Vector2(URBoundry.position.x, transform.position.y);
+            _center = transform.position;
+        }
+
+        if (transform.position.y < BLBoundry.position.y)
+        {
+            transform.position = new Vector2(transform.position.x, BLBoundry.position.y);
+            _center = transform.position;
+        }
+        else if (transform.position.y > URBoundry.position.y)
+        {
+            transform.position = new Vector2(transform.position.x, URBoundry.position.y);
+            _center = transform.position;
+        }
+
         if (_moveDirection != Vector2.zero)
         {
             rb.velocity = _moveDirection * _moveSpeed;

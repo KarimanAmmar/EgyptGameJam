@@ -25,7 +25,10 @@ namespace GameSystem.ShootingSystem
                         if (babybirds[i].gameObject.tag == "bullet")
                         {
                             PigeonFlockAgent agentpigeon = babybirds[i].GetComponent<PigeonFlockAgent>();
-                            agentpigeon.MyPigeonFlock._pAgentsList.Remove(babybirds[i]);
+                            if (PigeonFlock.Instance._pAgentsList.Contains(babybirds[i]))
+                            {
+                                agentpigeon.MyPigeonFlock._pAgentsList.Remove(babybirds[i]);
+                            }
                             K_BirdBehavior FirePigeonManager = babybirds[i].GetComponent<K_BirdBehavior>();
                             FirePigeonManager.canShoot = true;
                             //shoot logic related here

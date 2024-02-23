@@ -1097,7 +1097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position1: {fileID: 1744448172}
   position2: {fileID: 23630999}
-  speed: 10
+  speed: 1
 --- !u!4 &382283371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 127978193123445494, guid: 3b53336e76ee0374bb815e9bae538848, type: 3}

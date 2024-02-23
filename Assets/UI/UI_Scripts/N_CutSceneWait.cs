@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class N_CutSceneWait : MonoBehaviour
 {
-    public float waitTime = 6f;
+    public float waitTime = 35f;
     // Start is called before the first frame update
     void Start()
     {

@@ -48,7 +48,7 @@ public class N_GameUI : MonoBehaviour
     public void RestartGame()
     {
         GamePaused = false;
-        StartCoroutine(LoadingLevel(1));
+        StartCoroutine(LoadingLevel(3));
     }
 
     IEnumerator LoadingLevel(int level)
@@ -65,7 +65,7 @@ public class N_GameUI : MonoBehaviour
     public void MainMenu()
     {
         GamePaused = false;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         Debug.Log("menu");
     }
     public void PauseGame()

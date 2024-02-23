@@ -16,6 +16,7 @@ public class N_MainMenu : MonoBehaviour
     {
         /*mainmenu.SetActive(false);
         loadingScreen.SetActive(true);*/
+        Time.timeScale = 1;
         StartCoroutine(LoadingLevel(1));
         //SceneManager.LoadScene(1);
     }

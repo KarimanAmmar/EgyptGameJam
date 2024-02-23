@@ -82,7 +82,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &6830164071610100992
@@ -223,7 +223,7 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 95bf963bdd824ab4c8d2d0be1be3586b, type: 2}
   - {fileID: 9100000, guid: 835206eb930ec4f489921205f31a39c6, type: 2}
   - {fileID: 9100000, guid: b45b9186807e27b4091fb015ff335775, type: 2}
-  Egg: {fileID: 0}
+  Egg: {fileID: 4049669334264192435, guid: 5a0a6e02346b1aa4db803049a8b07f18, type: 3}
 --- !u!114 &9120876615368887015
 MonoBehaviour:
   m_ObjectHideFlags: 0

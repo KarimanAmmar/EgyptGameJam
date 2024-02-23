@@ -75,14 +75,14 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1399683842, guid: e24fc52579e91bc4eaae107c939acac0, type: 3}
-  m_Color: {r: 0.57402086, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &6830164071610100992
@@ -218,13 +218,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pigeonHealth: 1
-  _timeToEvolve: 10
+  _timeToEvolve: 5
   _SkinColor:
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 0}
-  - {r: 1, g: 1, b: 1, a: 0}
-  gameEvents: {fileID: 11400000, guid: e3dba15da8b977849bb3677435f282af, type: 2}
+  - {fileID: 9100000, guid: cc15e89673cbf4e469973368e5b5d39d, type: 2}
+  - {fileID: 9100000, guid: bed659946aa2b134db6d6609d43c3b43, type: 2}
+  - {fileID: 9100000, guid: 41987d34e860ac54481fe078351bccd9, type: 2}
+  Egg: {fileID: 4049669334264192435, guid: 5a0a6e02346b1aa4db803049a8b07f18, type: 3}
 --- !u!114 &9120876615368887015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +239,8 @@ MonoBehaviour:
   canShoot: 0
   rb: {fileID: 3635894203690636377}
   _fireSpeed: {x: 5, y: 0}
+  MaxRange: 12
+  InstantiatePigeon: {fileID: 11400000, guid: 538dd80a2e261c84b953c847ce5c6995, type: 2}
 --- !u!114 &-3364031367866030663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,4 +254,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Egg: {fileID: 4049669334264192435, guid: 5a0a6e02346b1aa4db803049a8b07f18, type: 3}
-  colonySystemRef: {fileID: 0}

@@ -5,16 +5,17 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class PigeonFlockAgent : MonoBehaviour
 {
-    [Range(1f, 10f)]
+    [Range(1f, 4f)]
     public int _pigeonHealth=1;
     [SerializeField] float _timeToEvolve = 10;
-    public List<Color> _SkinColor;
+    public List<RuntimeAnimatorController> _SkinColor;
 
     Collider2D _pAgentCollider;
     Rigidbody2D _pAgentRigidbody;
     PigeonFlock _myPigeonFlock;
 
-    [SerializeField] GameEvents gameEvents;
+   // [SerializeField] GameEvents gameEvents;
+    [SerializeField] GameObject Egg;
     public PigeonFlock MyPigeonFlock { get { return _myPigeonFlock; } set{ _myPigeonFlock = value; } }
     public Collider2D PigeonAgentCollider { get { return _pAgentCollider; } set { _pAgentCollider = value; } }
     public Rigidbody2D PigeonAgentRidgidbody { get { return _pAgentRigidbody; } set { _pAgentRigidbody = value; } }
@@ -47,6 +48,7 @@ public class PigeonFlockAgent : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("P collision detected");
+        AudioManager.instance.PlayerSFX(AudioManager.instance.Collision);
         int tempPHealth = _pigeonHealth;
        
 
@@ -56,12 +58,16 @@ public class PigeonFlockAgent : MonoBehaviour
         
         if (collision.gameObject.GetComponent<N_EnemyData>()._maxHealth <= 0)
         {
+            AudioManager.instance.PlayerSFX(AudioManager.instance.EnemyDeath);
             Destroy(collision.gameObject);
+            InstantiateEgg(collision.gameObject.transform);
+            //gameEvents.GameAction?.Invoke();
         }
         if (_pigeonHealth <= 0)
         {
+
+            AudioManager.instance.PlayerSFX(AudioManager.instance.PlayerDeath);
             Destroy(this.gameObject);
-            gameEvents.GameAction?.Invoke();
         }
     }
     private void OnDestroy()
@@ -81,7 +87,7 @@ public class PigeonFlockAgent : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(_timeToEvolve);
-            if (_pigeonHealth < 4)
+            if (_pigeonHealth < 3)
             {
                 _pigeonHealth++;
                 EvolveSkin();
@@ -90,18 +96,25 @@ public class PigeonFlockAgent : MonoBehaviour
     }
     void EvolveSkin()
     {
-        SpriteRenderer PigeonSkin=this.gameObject.GetComponentInChildren<SpriteRenderer>();
+        Animator PigeonSkin=this.gameObject.GetComponentInChildren<Animator>();
         if (this.gameObject.tag == "bullet")
         {
             return;
         }
+        
         switch(_pigeonHealth)
         {
-            case 1: PigeonSkin.color = _SkinColor[_pigeonHealth-1]; break;
-            case 2: PigeonSkin.color = _SkinColor[_pigeonHealth-1]; break;
-            case 3: PigeonSkin.color = Color.blue; break;
-            case 4: PigeonSkin.color = Color.black; break;
             
+            case 1: PigeonSkin.runtimeAnimatorController = _SkinColor[_pigeonHealth-1]; break;
+            case 2: PigeonSkin.runtimeAnimatorController = _SkinColor[_pigeonHealth-1]; break;
+            case 3: PigeonSkin.runtimeAnimatorController = _SkinColor[_pigeonHealth - 1]; break;
+            //case 4: PigeonSkin.runtimeAnimatorController = _SkinColor[_pigeonHealth - 1]; break;
+                //case 4: PigeonSkin.runtimeAnimatorController = Color.black; break;
+
         }
+    }
+    public void InstantiateEgg(Transform EggPos)
+    {
+        Instantiate(Egg, EggPos.transform.position, Quaternion.identity);
     }
 }

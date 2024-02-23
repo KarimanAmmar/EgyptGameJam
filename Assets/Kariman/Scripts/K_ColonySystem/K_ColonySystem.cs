@@ -9,6 +9,7 @@ public class K_ColonySystem : MonoBehaviour
 {
     [SerializeField] List<Image> RewardEggs;
     [SerializeField] GameEvents eggEvent;
+    [SerializeField] GameEvents InstantiateEvent;
 
     public int counter=-1; 
 
@@ -20,10 +21,12 @@ public class K_ColonySystem : MonoBehaviour
     private void OnEnable()
     {
         eggEvent.GameAction += ONINcreaceCounter;
+        InstantiateEvent.GameAction += AddPigeon;
     }
     private void OnDisable()
     {
         eggEvent.GameAction -= ONINcreaceCounter;
+        InstantiateEvent.GameAction -= AddPigeon;
     }
     void SoldEggScore()
     {
@@ -60,5 +63,6 @@ public class K_ColonySystem : MonoBehaviour
             pigeonFlock.gameObject.transform);
 
         pigeonFlock._pAgentsList.Add(newPigeon);
+        Debug.Log("pigeon added");
     }
 }

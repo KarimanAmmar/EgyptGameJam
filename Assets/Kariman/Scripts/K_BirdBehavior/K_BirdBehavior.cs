@@ -8,7 +8,9 @@ public class K_BirdBehavior : MonoBehaviour
     public bool canShoot = false;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Vector2 _fireSpeed;
-
+    [SerializeField] int MaxRange;
+    //[SerializeField] Transform EndPoint;
+    [SerializeField] GameEvents InstantiatePigeon;
     void Update()
     {
         move();
@@ -19,6 +21,13 @@ public class K_BirdBehavior : MonoBehaviour
         {
             rb.velocity = _fireSpeed;
             canShoot = false;
+        }
+        float distanceX = Mathf.Abs(this.transform.position.x - MaxRange);
+
+        if (distanceX <= 1.5)
+        {
+            InstantiatePigeon.GameAction?.Invoke();
+            Destroy(this.gameObject);
         }
     }
 }

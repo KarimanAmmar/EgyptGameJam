@@ -30,6 +30,7 @@ public class PigeonFlock : MonoBehaviour
     [SerializeField] float _impulsePowerScale = 10;
     [SerializeField] float _attractRadius = 1;
     [SerializeField] float _attractPowerScale = 10;
+    [SerializeField] RuntimeAnimatorController position_animation;
 
     [SerializeField] StayInBorders _pigeonBorder;
 
@@ -158,7 +159,7 @@ public class PigeonFlock : MonoBehaviour
         _sacrificialPigeon = _pAgentsList[_currentSacrificialPigeonID];
 
         _sacrificialPigeon.gameObject.tag = "bullet";
-        _sacrificialPigeon.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+        _sacrificialPigeon.GetComponentInChildren<Animator>().runtimeAnimatorController = position_animation;
         _pAgentsList.Remove(_pAgentsList[_currentSacrificialPigeonID]);
         //should be called when the sacrifice pigeon is killed event
         GameData.instance.CalculateFlockBorderRadius(_pAgentsList.Count);

@@ -6,11 +6,23 @@ using UnityEngine.UI;
 
 public class N_GameUI : MonoBehaviour
 {
-    bool GamePaused;
+    internal bool GamePaused;
     [SerializeField] private Slider loadingslider;
     [SerializeField] private GameObject lose;
+    [SerializeField] private GameEvents tutorialP;
 
     public static N_GameUI instance;
+
+    private void OnEnable()
+    {
+        tutorialP.GameAction += TutorialPause;
+    }
+
+    private void OnDisable()
+    {
+        tutorialP.GameAction -= TutorialPause;
+    }
+
     private void Awake()
     {
         if (instance == null)
@@ -68,5 +80,10 @@ public class N_GameUI : MonoBehaviour
     {
         GamePaused = true;
         lose.SetActive(true);
+    }
+
+    public void TutorialPause()
+    {
+        GamePaused = true;
     }
 }

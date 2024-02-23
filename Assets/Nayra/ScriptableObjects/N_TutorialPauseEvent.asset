@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61380382ced8c3c4d821198e3d4fdf6d, type: 3}
-  m_Name: enemy
+  m_Script: {fileID: 11500000, guid: 04abcc3b80c47684f87f77833735155c, type: 3}
+  m_Name: N_TutorialPauseEvent
   m_EditorClassIdentifier: 
-  enemyName: Dragon
-  damage: 2
-  maxHealth: 2
-  speed: 5

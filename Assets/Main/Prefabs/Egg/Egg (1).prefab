@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7421272249832984355}
   - component: {fileID: 7341289120760334518}
   - component: {fileID: 1471514734645801686}
-  - component: {fileID: 1272278147040317288}
+  - component: {fileID: -1814717561763032869}
   m_Layer: 0
   m_Name: Egg (1)
   m_TagString: Untagged
@@ -272,30 +272,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eggEvent: {fileID: 11400000, guid: e3dba15da8b977849bb3677435f282af, type: 2}
---- !u!50 &1272278147040317288
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!95 &-1814717561763032869
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4049669334264192435}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0.06
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0b1e0d852814adc41bf80efbedfa408e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

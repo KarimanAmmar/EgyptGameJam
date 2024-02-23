@@ -14,11 +14,13 @@ public class K_EggBehavior : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    private void Update()
+    private void Start()
     {
-        if (Time.time > 10f)
-        {
-            Destroy(this.gameObject);
-        }
+        StartCoroutine(DestroyEgg());
+    }
+    IEnumerator DestroyEgg()
+    {
+        yield return new WaitForSeconds(3);
+        Destroy(this.gameObject);
     }
 }

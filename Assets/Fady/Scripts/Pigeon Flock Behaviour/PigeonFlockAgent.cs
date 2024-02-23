@@ -76,10 +76,10 @@ public class PigeonFlockAgent : MonoBehaviour
         {
             GameData.instance.CalculateFlockBorderRadius(PigeonFlock.Instance._pAgentsList.Count);
             PigeonFlock.Instance._pAgentsList.Remove(this);
-            if (this.gameObject.tag == "bullet")
-            {
-                PigeonFlock.Instance.ChoosePigeonToShootPigeon();
-            }
+            //if (this.gameObject.tag == "bullet")
+            //{
+            //    PigeonFlock.Instance.ChoosePigeonToShootPigeon();
+            //}
         }
     }
     IEnumerator EvolveHealth()

@@ -204,7 +204,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &8431029691970563530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d167855d49084524c9dc381e99604f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pigeonHealth: 3
+  _pigeonHealth: 1
   _timeToEvolve: 10
   _SkinColor:
   - {r: 1, g: 1, b: 1, a: 1}

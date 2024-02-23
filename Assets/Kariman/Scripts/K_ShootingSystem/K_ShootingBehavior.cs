@@ -18,7 +18,7 @@ namespace GameSystem.ShootingSystem
             shootPos.x += GameData.instance.FlockBorderRadius;
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (PigeonFlock.Instance._pAgentsList.Count > -1&&Vector2.Distance(PigeonFlock.Instance._currentSacrificialPigeon.transform.position, shootPos)<1)
+                if (PigeonFlock.Instance._pAgentsList.Count > -1&&PigeonFlock.Instance._currentSacrificialPigeon&&Vector2.Distance(PigeonFlock.Instance._currentSacrificialPigeon.transform.position, shootPos)<1)
                 {
                     CollectChildObjects();
                     for (int i = 0; i < babybirds.Count; i++)
@@ -32,7 +32,15 @@ namespace GameSystem.ShootingSystem
                             Debug.Log("found");
                         }
                     }
-                    PigeonFlock.Instance._currentSacrificialPigeon = PigeonFlock.Instance.ChoosePigeonToShootPigeon();
+                    if (PigeonFlock.Instance._pAgentsList.Count > 0)
+                    {
+                        PigeonFlock.Instance._currentSacrificialPigeon = PigeonFlock.Instance.ChoosePigeonToShootPigeon();
+                    }
+                    else
+                    {
+                        PigeonFlock.Instance._currentSacrificialPigeon=null;
+
+                    }
                 }
             }
         }

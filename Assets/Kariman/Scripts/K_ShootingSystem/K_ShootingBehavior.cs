@@ -8,7 +8,6 @@ namespace GameSystem.ShootingSystem
     public class K_ShootingBehavior : MonoBehaviour
     {
         [SerializeField] private List<PigeonFlockAgent> babybirds = new List<PigeonFlockAgent>();
-        
         private void Update()
         {
             Shoot();
@@ -32,7 +31,10 @@ namespace GameSystem.ShootingSystem
                             FirePigeonManager.canShoot = true;
                             //shoot logic related here
                             AudioManager.instance.PlayerSFX(AudioManager.instance.shoot);
+                            Animator animator = babybirds[i].gameObject.GetComponent<Animator>();
 
+                            animator.SetBool("Shoot", true);
+                           
                             Debug.Log("found");
                         }
                     }

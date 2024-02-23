@@ -1067,6 +1067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   babybirds: []
+  animator: {fileID: 0}
 --- !u!114 &336748343 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3025873265169594145, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
@@ -1519,7 +1520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position1: {fileID: 1744448172}
   position2: {fileID: 23630999}
-  speed: 10
+  speed: 1
 --- !u!4 &967398765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9116975101978063213, guid: f05e4f0559d56a04f8f10a0314586630, type: 3}

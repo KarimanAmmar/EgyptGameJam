@@ -65,7 +65,8 @@ public class N_GameUI : MonoBehaviour
     public void MainMenu()
     {
         GamePaused = false;
-        SceneManager.LoadScene(1);
+        StartCoroutine(LoadingLevel(1));
+        //SceneManager.LoadScene(1);
         Debug.Log("menu");
     }
     public void PauseGame()

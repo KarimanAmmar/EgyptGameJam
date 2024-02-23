@@ -47,7 +47,7 @@ public class N_checkEnemy : MonoBehaviour
             _startPanel.SetActive(false);
         }
 
-        if (Time.time >= 60)
+        if (Time.time >= 60f)
         {
             N_GameUI.instance.MainMenu();
         }

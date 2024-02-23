@@ -223,6 +223,7 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 95bf963bdd824ab4c8d2d0be1be3586b, type: 2}
   - {fileID: 9100000, guid: 835206eb930ec4f489921205f31a39c6, type: 2}
   - {fileID: 9100000, guid: b45b9186807e27b4091fb015ff335775, type: 2}
+  Egg: {fileID: 0}
 --- !u!114 &9120876615368887015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +239,8 @@ MonoBehaviour:
   canShoot: 0
   rb: {fileID: 3635894203690636377}
   _fireSpeed: {x: 5, y: 0}
+  MaxRange: 12
+  InstantiatePigeon: {fileID: 11400000, guid: 538dd80a2e261c84b953c847ce5c6995, type: 2}
 --- !u!114 &-3364031367866030663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,4 +254,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Egg: {fileID: 4049669334264192435, guid: 5a0a6e02346b1aa4db803049a8b07f18, type: 3}
-  colonySystemRef: {fileID: 0}

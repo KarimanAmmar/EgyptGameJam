@@ -14,11 +14,13 @@ public class N_MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        /*mainmenu.SetActive(false);
-        loadingScreen.SetActive(true);*/
         Time.timeScale = 1;
-        StartCoroutine(LoadingLevel(1));
-        //SceneManager.LoadScene(1);
+        StartCoroutine(LoadingLevel(3));
+    }
+    public void TutorialScene()
+    {
+        Time.timeScale = 1;
+        StartCoroutine(LoadingLevel(2));
     }
 
     IEnumerator LoadingLevel(int level)

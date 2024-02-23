@@ -27,7 +27,7 @@ public class K_ColonySystem : MonoBehaviour
     }
     void SoldEggScore()
     {
-        if (counter <= 5)
+        if (counter <4)
         {
             RewardEggs[counter].GetComponent<Image>().sprite = soledEgg;
             StartCoroutine(FadeEggScore());
@@ -46,7 +46,7 @@ public class K_ColonySystem : MonoBehaviour
     }
     void ONINcreaceCounter()
     {
-        if (counter <= 5)
+        if (counter < 4)
         {
             counter++;
             SoldEggScore();

@@ -14,6 +14,7 @@ public class PigeonFlockAgent : MonoBehaviour
     Rigidbody2D _pAgentRigidbody;
     PigeonFlock _myPigeonFlock;
 
+    [SerializeField] GameEvents gameEvents;
     public PigeonFlock MyPigeonFlock { get { return _myPigeonFlock; } set{ _myPigeonFlock = value; } }
     public Collider2D PigeonAgentCollider { get { return _pAgentCollider; } set { _pAgentCollider = value; } }
     public Rigidbody2D PigeonAgentRidgidbody { get { return _pAgentRigidbody; } set { _pAgentRigidbody = value; } }
@@ -59,9 +60,8 @@ public class PigeonFlockAgent : MonoBehaviour
         }
         if (_pigeonHealth <= 0)
         {
-
             Destroy(this.gameObject);
-
+            gameEvents.GameAction?.Invoke();
         }
     }
     private void OnDestroy()

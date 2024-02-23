@@ -224,6 +224,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 0}
   - {r: 1, g: 1, b: 1, a: 0}
+  gameEvents: {fileID: 11400000, guid: e3dba15da8b977849bb3677435f282af, type: 2}
 --- !u!114 &9120876615368887015
 MonoBehaviour:
   m_ObjectHideFlags: 0

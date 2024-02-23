@@ -14,7 +14,8 @@ public class PigeonFlockAgent : MonoBehaviour
     Rigidbody2D _pAgentRigidbody;
     PigeonFlock _myPigeonFlock;
 
-    [SerializeField] GameEvents gameEvents;
+   // [SerializeField] GameEvents gameEvents;
+    [SerializeField] GameObject Egg;
     public PigeonFlock MyPigeonFlock { get { return _myPigeonFlock; } set{ _myPigeonFlock = value; } }
     public Collider2D PigeonAgentCollider { get { return _pAgentCollider; } set { _pAgentCollider = value; } }
     public Rigidbody2D PigeonAgentRidgidbody { get { return _pAgentRigidbody; } set { _pAgentRigidbody = value; } }
@@ -57,11 +58,12 @@ public class PigeonFlockAgent : MonoBehaviour
         if (collision.gameObject.GetComponent<N_EnemyData>()._maxHealth <= 0)
         {
             Destroy(collision.gameObject);
+            InstantiateEgg(collision.gameObject.transform);
+            //gameEvents.GameAction?.Invoke();
         }
         if (_pigeonHealth <= 0)
         {
             Destroy(this.gameObject);
-            gameEvents.GameAction?.Invoke();
         }
     }
     private void OnDestroy()
@@ -103,5 +105,9 @@ public class PigeonFlockAgent : MonoBehaviour
             case 4: PigeonSkin.color = Color.black; break;
             
         }
+    }
+    public void InstantiateEgg(Transform EggPos)
+    {
+        Instantiate(Egg, EggPos.transform.position, Quaternion.identity);
     }
 }

@@ -816,7 +816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3025873265169594145, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
       propertyPath: _startingCount
-      value: 20
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3025873265169594145, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
       propertyPath: _pFlockBehaviour
@@ -992,7 +992,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0145ee5b98c6c824aa72b171ddfcb30b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: adafc57acafd40c42bf2c32c80b435e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1281,7 +1281,7 @@ MonoBehaviour:
   MainPigController: {fileID: 117796522}
   pigeonPrefab: {fileID: 7703768484301726517, guid: 623a0b1b0fe9c1f4b9bb14790682b431, type: 3}
   soledEgg: {fileID: 21300000, guid: 0145ee5b98c6c824aa72b171ddfcb30b, type: 3}
-  Faddedegg: {fileID: 21300000, guid: 3e1529ec44649934c99bc7b794546a2b, type: 3}
+  Faddedegg: {fileID: 21300000, guid: 6687588befa0c32408def5f9bbc10d97, type: 3}
   pigeonFlock: {fileID: 336748343}
 --- !u!4 &895550552
 Transform:
@@ -1408,7 +1408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0145ee5b98c6c824aa72b171ddfcb30b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: adafc57acafd40c42bf2c32c80b435e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1483,7 +1483,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0145ee5b98c6c824aa72b171ddfcb30b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: adafc57acafd40c42bf2c32c80b435e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2284,7 +2284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0145ee5b98c6c824aa72b171ddfcb30b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: adafc57acafd40c42bf2c32c80b435e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2533,7 +2533,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0145ee5b98c6c824aa72b171ddfcb30b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: adafc57acafd40c42bf2c32c80b435e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

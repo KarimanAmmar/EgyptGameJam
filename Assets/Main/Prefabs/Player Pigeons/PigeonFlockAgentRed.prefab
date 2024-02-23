@@ -224,7 +224,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 0}
   - {r: 1, g: 1, b: 1, a: 0}
-  gameEvents: {fileID: 11400000, guid: e3dba15da8b977849bb3677435f282af, type: 2}
+  Egg: {fileID: 4049669334264192435, guid: 5a0a6e02346b1aa4db803049a8b07f18, type: 3}
 --- !u!114 &9120876615368887015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +240,8 @@ MonoBehaviour:
   canShoot: 0
   rb: {fileID: 3635894203690636377}
   _fireSpeed: {x: 5, y: 0}
+  MaxRange: 12
+  InstantiatePigeon: {fileID: 11400000, guid: 538dd80a2e261c84b953c847ce5c6995, type: 2}
 --- !u!114 &-3364031367866030663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,4 +255,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Egg: {fileID: 4049669334264192435, guid: 5a0a6e02346b1aa4db803049a8b07f18, type: 3}
-  colonySystemRef: {fileID: 0}

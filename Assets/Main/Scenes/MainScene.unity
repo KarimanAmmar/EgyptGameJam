@@ -990,6 +990,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3025873265169594145, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
+      propertyPath: position_animation
+      value: 
+      objectReference: {fileID: 9100000, guid: 4b836b7125d46c446ae9ef9321ef0cb9, type: 2}
+    - target: {fileID: 3025873265169594145, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
       propertyPath: _pigeonLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -1067,7 +1071,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   babybirds: []
-  animator: {fileID: 0}
 --- !u!114 &336748343 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3025873265169594145, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
@@ -3083,15 +3086,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -767791570, guid: 2440cbedc4463fa4f95f1bb73e205616, type: 3}
-  m_Color: {r: 0.113022685, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: -638669489, guid: c8a956459d28bb94a95fac519a571550, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.43, y: 2.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1316732933355875880
@@ -3567,7 +3570,7 @@ Animator:
   m_GameObject: {fileID: 3180321248739110549}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b45b9186807e27b4091fb015ff335775, type: 2}
+  m_Controller: {fileID: 9100000, guid: 83529eff1097c264aa919952dea19db1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

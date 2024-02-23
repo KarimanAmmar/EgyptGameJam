@@ -31,9 +31,8 @@ namespace GameSystem.ShootingSystem
                             FirePigeonManager.canShoot = true;
                             //shoot logic related here
                             AudioManager.instance.PlayerSFX(AudioManager.instance.shoot);
-                            Animator animator = babybirds[i].gameObject.GetComponent<Animator>();
-
-                            animator.SetBool("Shoot", true);
+                           // Animator animator = babybirds[i].gameObject.GetComponent<Animator>();
+                            //animator.SetBool("Shoot", true);
                            
                             Debug.Log("found");
                         }

@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class PigeonFlockAgent : MonoBehaviour
 {
-    [Range(1f, 3f)]
+    [Range(1f, 4f)]
     public int _pigeonHealth=1;
     [SerializeField] float _timeToEvolve = 10;
     public List<RuntimeAnimatorController> _SkinColor;
@@ -97,6 +97,10 @@ public class PigeonFlockAgent : MonoBehaviour
     void EvolveSkin()
     {
         Animator PigeonSkin=this.gameObject.GetComponentInChildren<Animator>();
+        if (this.gameObject.tag == "bullet")
+        {
+            return;
+        }
         
         switch(_pigeonHealth)
         {
@@ -104,8 +108,9 @@ public class PigeonFlockAgent : MonoBehaviour
             case 1: PigeonSkin.runtimeAnimatorController = _SkinColor[_pigeonHealth-1]; break;
             case 2: PigeonSkin.runtimeAnimatorController = _SkinColor[_pigeonHealth-1]; break;
             case 3: PigeonSkin.runtimeAnimatorController = _SkinColor[_pigeonHealth - 1]; break;
-            //case 4: PigeonSkin.runtimeAnimatorController = Color.black; break;
-            
+            //case 4: PigeonSkin.runtimeAnimatorController = _SkinColor[_pigeonHealth - 1]; break;
+                //case 4: PigeonSkin.runtimeAnimatorController = Color.black; break;
+
         }
     }
     public void InstantiateEgg(Transform EggPos)

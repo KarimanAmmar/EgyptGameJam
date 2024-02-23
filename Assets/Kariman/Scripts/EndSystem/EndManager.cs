@@ -13,7 +13,7 @@ public class EndManager : MonoBehaviour
     {
         if(Time.time > 300)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(4);
         }
     }
 }

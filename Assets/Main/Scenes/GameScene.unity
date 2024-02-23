@@ -1035,6 +1035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   babybirds: []
+  animator: {fileID: 0}
 --- !u!114 &336748343 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3025873265169594145, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}

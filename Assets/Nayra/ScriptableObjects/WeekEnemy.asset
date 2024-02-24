@@ -15,4 +15,4 @@ MonoBehaviour:
   enemyName: Dragon
   damage: 2
   maxHealth: 2
-  speed: 3
+  speed: 4

@@ -15,4 +15,4 @@ MonoBehaviour:
   enemyName: Bird
   damage: 1
   maxHealth: 4
-  speed: 2
+  speed: 3

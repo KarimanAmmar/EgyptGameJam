@@ -5,15 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class EndManager : MonoBehaviour
 {
-    private void Update()
+    private void Start()
     {
-        ActiveEndPoint();
+       StartCoroutine(ActiveEndPoint());
     }
-    void ActiveEndPoint()
+    IEnumerator ActiveEndPoint()
     {
-        if(Time.time > 300)
-        {
-            SceneManager.LoadScene(4);
-        }
+        yield return new WaitForSeconds(300f);
+        SceneManager.LoadScene(4);
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class N_checkEnemy : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class N_checkEnemy : MonoBehaviour
     private bool Week = true;
     private bool strong = true;
 
+    private void Start()
+    {
+        StartCoroutine(GoToMainMenu());
+    }
     private void OnEnable()
     {
         _checkEnemy.GameAction += EnemySpawned;
@@ -47,13 +52,13 @@ public class N_checkEnemy : MonoBehaviour
             _startPanel.SetActive(false);
         }
 
-        if (Time.time >= 60f)
-        {
-            N_GameUI.instance.MainMenu();
-        }
 
     }
-
+    IEnumerator GoToMainMenu()
+    {
+        yield return new WaitForSeconds(60);
+        N_GameUI.instance.MainMenu();
+    }
     void checkforPausing()
     {
         if (N_SpwanEnimies.instance.namePrefab == "sprites for crow_0")

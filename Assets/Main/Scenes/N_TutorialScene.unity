@@ -1099,7 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f68a7a583a693a43994accf466529f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
+  musicSource: {fileID: 1299282369}
   SFXSource: {fileID: 1299282369}
   EnemyDeath: {fileID: 0}
   PlayerDeath: {fileID: 0}
@@ -1404,7 +1404,7 @@ Animator:
   m_GameObject: {fileID: 374282303}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 83529eff1097c264aa919952dea19db1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0fd5d68e293937642851fb370a91fd8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

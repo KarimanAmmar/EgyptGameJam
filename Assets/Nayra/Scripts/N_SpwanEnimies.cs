@@ -20,10 +20,12 @@ public class N_SpwanEnimies : MonoBehaviour
     [SerializeField] private int maxY = 4;
     [SerializeField] private float valX = 10f;
 
-    [SerializeField] private float spwanRate = 2f;
+    [SerializeField] private float spwanRate;
     [SerializeField] private int waveTime = 20;
 
     [SerializeField] GameEvents _checkEnemy;
+
+ 
 
     private void Awake()
     {

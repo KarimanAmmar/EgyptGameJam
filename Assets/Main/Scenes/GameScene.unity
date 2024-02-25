@@ -843,7 +843,7 @@ MonoBehaviour:
   minY: -4
   maxY: 4
   valX: 10
-  spwanRate: 2
+  spwanRate: 1
   waveTime: 20
   _checkEnemy: {fileID: 11400000, guid: 2e609f3b36575464b93403f0f008a6db, type: 2}
 --- !u!1 &294173457
@@ -943,7 +943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3025873265169594145, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
       propertyPath: _startingCount
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3025873265169594145, guid: 2421162e9cb63a7479abe038dedf0d6e, type: 3}
       propertyPath: _pFlockBehaviour

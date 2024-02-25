@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: StrongEnemy
   m_EditorClassIdentifier: 
   enemyName: Bird
-  damage: 1
-  maxHealth: 4
+  damage: 2
+  maxHealth: 5
   speed: 3

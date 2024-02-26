@@ -843,7 +843,7 @@ MonoBehaviour:
   minY: -4
   maxY: 4
   valX: 10
-  spwanRate: 1
+  spwanRate: 1.5
   waveTime: 20
   _checkEnemy: {fileID: 11400000, guid: 2e609f3b36575464b93403f0f008a6db, type: 2}
 --- !u!1 &294173457

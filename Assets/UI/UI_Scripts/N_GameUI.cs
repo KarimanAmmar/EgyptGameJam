@@ -71,7 +71,10 @@ public class N_GameUI : MonoBehaviour
     }
     public void PauseGame()
     {
-        GamePaused = true;
+        if(!GamePaused)
+        {
+            GamePaused = true;
+        }
     }
     public void ResumeGame()
     {

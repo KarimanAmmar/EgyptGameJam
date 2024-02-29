@@ -10,6 +10,7 @@ public class N_GameUI : MonoBehaviour
     [SerializeField] private Slider loadingslider;
     [SerializeField] private GameObject lose;
     [SerializeField] private GameEvents tutorialP;
+    [SerializeField] private GameObject PausePanal;
 
     public static N_GameUI instance;
 
@@ -43,6 +44,11 @@ public class N_GameUI : MonoBehaviour
         else
         {
             Time.timeScale = 1;
+        }
+        if(Input.GetKeyUp(KeyCode.Escape))
+        {
+            GamePaused = true;
+            PausePanal.SetActive(true);
         }
     }
     public void RestartGame()
